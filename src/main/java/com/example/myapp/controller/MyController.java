@@ -33,6 +33,7 @@ public class MyController {
     }
 
     @GetMapping("/api/user/{id}")
+    @Operation(summary = "Get User Id", description = "Returns a User Id.")
     public String getUserById(@PathVariable("id") Long id) {
         return "User ID: " + id;
     }
